@@ -563,7 +563,7 @@ The permutation object is already initialized to the identity (0, 1, 2 … $elem
 
 =head3 init()
 
-This method initialize the permutation object To the identity and returns B<self>.
+This method initialize the permutation object to the identity and returns B<self>.
 
 =head3 copy($src! where * ~~ Math::Libgsl::Permutation)
 
@@ -575,7 +575,7 @@ This method returns the permutation value at position B<$elem>.
 
 =head3 all(--> Seq)
 
-This method returns a Seq of all elements of the current permutation.
+This method returns a Seq of all the elements of the current permutation.
 
 =head3 swap(Int $elem1!, Int $elem2!)
 
@@ -600,12 +600,12 @@ This method computes the inverse of the current permutation and stores the resul
 =head3 next()
 =head3 prev()
 
-These functions advance or step backwards the permutation p and return B<self>, useful for method chaining.
+These functions advance or step backwards the permutation and return B<self>, useful for method chaining.
 
 =head3 bnext(--> Bool)
 =head3 bprev(--> Bool)
 
-These functions advance or step backwards the permutation p and return a Bool: B<True> if successful or B<False> if there's no more permutation to produce.
+These functions advance or step backwards the permutation and return a Bool: B<True> if successful or B<False> if there's no more permutation to produce.
 
 =head3 permute(@data!, Int $stride! --> List)
 
