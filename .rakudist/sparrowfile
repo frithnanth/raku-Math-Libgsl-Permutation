@@ -1,0 +1,4 @@
+package-install %(
+  alpine => qqw{gsl gsl-dev make gcc g++},
+  debian => qqw{libgsl23 libgsl-dev libgslcblas0}
+);
