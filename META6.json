@@ -20,7 +20,7 @@
   "resources" : [
     "libraries/gslhelper"
   ],
-  "source-url" : "git://github.com/frithnanth/perl6-Math-Libgsl-Permutation.git",
+  "source-url" : "git://github.com/frithnanth/raku-Math-Libgsl-Permutation.git",
   "tags" : [
     "math",
     "nativecall"
