@@ -1,6 +1,6 @@
 use v6;
 
-unit class Math::Libgsl::Permutation:ver<0.0.4>:auth<cpan:FRITH>;
+unit class Math::Libgsl::Permutation:ver<0.0.5>:auth<cpan:FRITH>;
 
 use Math::Libgsl::Raw::Permutation :ALL;
 use Math::Libgsl::Vector;
@@ -338,67 +338,67 @@ method permute-vector-inv(Math::Libgsl::Vector $v)
 }
 method permute-vector-inv-num32(Math::Libgsl::Vector::Num32 $v)
 {
-  my $ret = gsl_permute_vector_inverse_float($!p, $v.vector);
+  my $ret = gsl_permute_vector_float_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-int32(Math::Libgsl::Vector::Int32 $v)
 {
-  my $ret = gsl_permute_vector_inverse_int($!p, $v.vector);
+  my $ret = gsl_permute_vector_int_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-uint32(Math::Libgsl::Vector::UInt32 $v)
 {
-  my $ret = gsl_permute_vector_inverse_uint($!p, $v.vector);
+  my $ret = gsl_permute_vector_uint_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-int64(Math::Libgsl::Vector::Int64 $v)
 {
-  my $ret = gsl_permute_vector_inverse_long($!p, $v.vector);
+  my $ret = gsl_permute_vector_long_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-uint64(Math::Libgsl::Vector::UInt64 $v)
 {
-  my $ret = gsl_permute_vector_inverse_ulong($!p, $v.vector);
+  my $ret = gsl_permute_vector_ulong_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-int16(Math::Libgsl::Vector::Int16 $v)
 {
-  my $ret = gsl_permute_vector_inverse_short($!p, $v.vector);
+  my $ret = gsl_permute_vector_short_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-uint16(Math::Libgsl::Vector::UInt16 $v)
 {
-  my $ret = gsl_permute_vector_inverse_ushort($!p, $v.vector);
+  my $ret = gsl_permute_vector_ushort_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-int8(Math::Libgsl::Vector::Int8 $v)
 {
-  my $ret = gsl_permute_vector_inverse_char($!p, $v.vector);
+  my $ret = gsl_permute_vector_char_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-uint8(Math::Libgsl::Vector::UInt8 $v)
 {
-  my $ret = gsl_permute_vector_inverse_uchar($!p, $v.vector);
+  my $ret = gsl_permute_vector_uchar_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-complex64(Math::Libgsl::Vector::Complex64 $v)
 {
-  my $ret = gsl_permute_vector_inverse_complex($!p, $v.vector);
+  my $ret = gsl_permute_vector_complex_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }
 method permute-vector-inv-complex32(Math::Libgsl::Vector::Complex32 $v)
 {
-  my $ret = gsl_permute_vector_inverse_complex_float($!p, $v.vector);
+  my $ret = gsl_permute_vector_complex_float_inverse($!p, $v.vector);
   fail X::Libgsl.new: errno => $ret, error => "Can't inverse permute the vector" if $ret ≠ GSL_SUCCESS;
   $v
 }

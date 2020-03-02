@@ -1,6 +1,6 @@
 use v6;
 
-unit module Math::Libgsl::Raw::Permutation:ver<0.0.1>:auth<cpan:FRITH>;
+unit module Math::Libgsl::Raw::Permutation:ver<0.0.5>:auth<cpan:FRITH>;
 
 use Math::Libgsl::Raw::Matrix;
 use Math::Libgsl::Matrix::Num32;
@@ -82,17 +82,17 @@ sub gsl_permute_vector_ulong(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt
 sub gsl_permute_vector_complex(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Complex64::gsl_vector_complex $v --> int32) is native(LIB) is export(:permapply) { * }
 sub gsl_permute_vector_complex_float(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Complex32::gsl_vector_complex_float $v --> int32) is native(LIB) is export(:permapply) { * }
 sub gsl_permute_vector_inverse(gsl_permutation $p, gsl_vector $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_float(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Num32::gsl_vector_float $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_char(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int8::gsl_vector_char $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_int(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int32::gsl_vector_int $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_long(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int64::gsl_vector_long $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_short(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int16::gsl_vector_short $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_uchar(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt8::gsl_vector_uchar $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_uint(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt32::gsl_vector_uint $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_ushort(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt16::gsl_vector_ushort $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_ulong(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt64::gsl_vector_ulong $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_float_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Num32::gsl_vector_float $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_char_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int8::gsl_vector_char $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_int_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int32::gsl_vector_int $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_long_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int64::gsl_vector_long $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_short_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int16::gsl_vector_short $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_uchar_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt8::gsl_vector_uchar $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_uint_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt32::gsl_vector_uint $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_ushort_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt16::gsl_vector_ushort $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_ulong_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::UInt64::gsl_vector_ulong $v --> int32) is native(LIB) is export(:permapply) { * }
 sub gsl_permute_vector_inverse_complex(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Complex64::gsl_vector_complex $v --> int32) is native(LIB) is export(:permapply) { * }
-sub gsl_permute_vector_inverse_complex_float(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Complex32::gsl_vector_complex_float $v --> int32) is native(LIB) is export(:permapply) { * }
+sub gsl_permute_vector_complex_float_inverse(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Complex32::gsl_vector_complex_float $v --> int32) is native(LIB) is export(:permapply) { * }
 sub gsl_permute_matrix(gsl_permutation $p, gsl_matrix $A --> int32) is native(LIB) is export(:permapply) { * }
 sub gsl_permute_matrix_float(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Num32::gsl_matrix_float $A --> int32) is native(LIB) is export(:permapply) { * }
 sub gsl_permute_matrix_char(gsl_permutation $p, Math::Libgsl::Raw::Matrix::Int8::gsl_matrix_char $A --> int32) is native(LIB) is export(:permapply) { * }
