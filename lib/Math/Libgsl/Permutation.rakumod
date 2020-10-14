@@ -555,8 +555,6 @@ method canonical-cycles(--> Int) { gsl_permutation_canonical_cycles($!p) }
 
 =begin pod
 
-[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Permutation.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Permutation)
-
 =head1 NAME
 
 Math::Libgsl::Permutation - An interface to libgsl, the Gnu Scientific Library - Permutations.
