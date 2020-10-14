@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Permutation.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Permutation)
+[![Actions Status](https://github.com/frithnanth/raku-Math-Libgsl-Permutation/workflows/test/badge.svg)](https://github.com/frithnanth/raku-Math-Libgsl-Permutation/actions) [![Build Status](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Permutation.svg?branch=master)](https://travis-ci.org/frithnanth/raku-Math-Libgsl-Permutation)
 
 NAME
 ====
@@ -29,7 +29,7 @@ The constructor accepts one parameter: the number of elements in the permutation
 
 ### init()
 
-This method initialize the permutation object To the identity and returns **self**.
+This method initialize the permutation object to the identity and returns **self**.
 
 ### copy($src! where * ~~ Math::Libgsl::Permutation)
 
@@ -41,7 +41,7 @@ This method returns the permutation value at position **$elem**.
 
 ### all(--> Seq)
 
-This method returns a Seq of all elements of the current permutation.
+This method returns a Seq of all the elements of the current permutation.
 
 ### swap(Int $elem1!, Int $elem2!)
 
@@ -67,13 +67,13 @@ This method computes the inverse of the current permutation and stores the resul
 
 ### prev()
 
-These functions advance or step backwards the permutation p and return **self**, useful for method chaining.
+These functions advance or step backwards the permutation and return **self**, useful for method chaining.
 
 ### bnext(--> Bool)
 
 ### bprev(--> Bool)
 
-These functions advance or step backwards the permutation p and return a Bool: **True** if successful or **False** if there's no more permutation to produce.
+These functions advance or step backwards the permutation and return a Bool: **True** if successful or **False** if there's no more permutation to produce.
 
 ### permute(@data!, Int $stride! --> List)
 
@@ -184,7 +184,7 @@ Prerequisites
 This module requires the libgsl library to be installed. Please follow the instructions below based on your platform:
 
 Debian Linux and Ubuntu 20.04
-------------
+-----------------------------
 
     sudo apt install libgsl23 libgsl-dev libgslcblas0
 
