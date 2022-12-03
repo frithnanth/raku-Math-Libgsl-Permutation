@@ -15,7 +15,6 @@ use Math::Libgsl::Raw::Matrix::UInt8;
 use Math::Libgsl::Raw::Matrix::Complex32;
 use Math::Libgsl::Raw::Matrix::Complex64;
 use NativeCall;
-use LibraryMake;
 
 constant GSLHELPER = %?RESOURCES<libraries/gslhelper>.absolute;
 
