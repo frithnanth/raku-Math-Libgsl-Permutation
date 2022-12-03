@@ -1,6 +1,6 @@
 use v6;
 
-unit module Math::Libgsl::Raw::Permutation:ver<0.0.6>:auth<cpan:FRITH>;
+unit module Math::Libgsl::Raw::Permutation:ver<0.0.6>:auth<zef:FRITH>;
 
 use Math::Libgsl::Raw::Matrix;
 use Math::Libgsl::Raw::Matrix::Num32;

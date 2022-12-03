@@ -1,6 +1,7 @@
 Revision history for Math-Libgsl-Permutation
 
 {{$NEXT}}
+    - Use zef ecosystem
 
 0.0.6  2020-10-14T11:24:22+02:00
     - Fix a 'use' problem

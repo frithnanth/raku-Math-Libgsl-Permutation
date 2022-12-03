@@ -1,6 +1,6 @@
 use v6;
 
-unit class Math::Libgsl::Permutation:ver<0.0.6>:auth<cpan:FRITH>;
+unit class Math::Libgsl::Permutation:ver<0.0.6>:auth<zef:FRITH>;
 
 use Math::Libgsl::Raw::Permutation :ALL;
 use Math::Libgsl::Vector;
@@ -561,7 +561,7 @@ Math::Libgsl::Permutation - An interface to libgsl, the Gnu Scientific Library -
 
 =head1 SYNOPSIS
 
-=begin code :lang<perl6>
+=begin code :lang<raku>
 
 use Math::Libgsl::Raw::Permutation :ALL;
 
@@ -734,7 +734,7 @@ The excellent C Library manual is available here L<https://www.gnu.org/software/
 
 This module requires the libgsl library to be installed. Please follow the instructions below based on your platform:
 
-=head2 Debian Linux and Ubuntu 20.04
+=head2 Debian Linux and Ubuntu 20.04+
 
 =begin code
 sudo apt install libgsl23 libgsl-dev libgslcblas0
