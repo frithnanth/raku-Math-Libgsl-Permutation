@@ -1,6 +1,6 @@
 use v6;
 
-unit class Math::Libgsl::Permutation:ver<0.0.7>:auth<zef:FRITH>;
+unit class Math::Libgsl::Permutation:ver<0.1.0>:auth<zef:FRITH>;
 
 use Math::Libgsl::Raw::Permutation :ALL;
 use Math::Libgsl::Vector;
