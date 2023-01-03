@@ -1,6 +1,7 @@
 Revision history for Math-Libgsl-Permutation
 
 {{$NEXT}}
+    - Methods that return self throw on error, instead of failing
 
 0.0.7  2022-12-03T15:02:47+01:00
     - Use zef ecosystem

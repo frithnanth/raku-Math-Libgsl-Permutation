@@ -55,9 +55,9 @@ method all(--> Seq) { $!p.data[^$.size] }
 
 method swap(Int $elem1!, Int $elem2!)
 {
-  fail X::Libgsl.new: errno => GSL_EINVAL, error => 'Index out of range' if $!p.size ≤ $elem1|$elem2;
+  X::Libgsl.new(errno => GSL_EINVAL, error => 'Index out of range').throw if $!p.size ≤ $elem1|$elem2;
   my $ret = gsl_permutation_swap($!p, $elem1, $elem2);
-  fail X::Libgsl.new: errno => $ret, error => "Can't get next permutation" if $ret ≠ GSL_SUCCESS;
+  X::Libgsl.new(errno => $ret, error => "Can't get next permutation").throw if $ret ≠ GSL_SUCCESS;
   self
 }
 
@@ -72,14 +72,14 @@ method inverse($dst! where * ~~ Math::Libgsl::Permutation) { gsl_permutation_inv
 method next
 {
   my $ret = gsl_permutation_next($!p);
-  fail X::Libgsl.new: errno => $ret, error => "Can't get next permutation" if $ret ≠ GSL_SUCCESS;
+  X::Libgsl.new(errno => $ret, error => "Can't get next permutation").throw if $ret ≠ GSL_SUCCESS;
   self
 }
 
 method prev
 {
   my $ret = gsl_permutation_prev($!p);
-  fail X::Libgsl.new: errno => $ret, error => "Can't get previous permutation" if $ret ≠ GSL_SUCCESS;
+  X::Libgsl.new(errno => $ret, error => "Can't get previous permutation").throw if $ret ≠ GSL_SUCCESS;
   self
 }
 
@@ -529,21 +529,21 @@ method fscanf(Str $filename! --> Int)
 method multiply($dst! where * ~~ Math::Libgsl::Permutation, $p2! where * ~~ Math::Libgsl::Permutation)
 {
   my $ret = gsl_permutation_mul($dst.p, $!p, $p2.p);
-  fail X::Libgsl.new: errno => $ret, error => "Can't multiply" if $ret ≠ GSL_SUCCESS;
+  X::Libgsl.new(errno => $ret, error => "Can't multiply").throw if $ret ≠ GSL_SUCCESS;
   self
 }
 
 method to-canonical($dst! where * ~~ Math::Libgsl::Permutation)
 {
   my $ret = gsl_permutation_linear_to_canonical($dst.p, $!p);
-  fail X::Libgsl.new: errno => $ret, error => "Can't transform to canonical" if $ret ≠ GSL_SUCCESS;
+  X::Libgsl.new(errno => $ret, error => "Can't transform to canonical").throw if $ret ≠ GSL_SUCCESS;
   self
 }
 
 method to-linear($dst! where * ~~ Math::Libgsl::Permutation)
 {
   my $ret = gsl_permutation_canonical_to_linear($dst.p, $!p);
-  fail X::Libgsl.new: errno => $ret, error => "Can't transform to linear" if $ret ≠ GSL_SUCCESS;
+  X::Libgsl.new(errno => $ret, error => "Can't transform to linear").throw if $ret ≠ GSL_SUCCESS;
   self
 }
 
@@ -580,6 +580,8 @@ This package provides both the low-level interface to the C library (Raw) and a 
 
 The constructor accepts one parameter: the number of elements in the permutation; it can be passed as a Pair or as a single value.
 The permutation object is already initialized to the identity (0, 1, 2 … $elems - 1).
+
+All the following methods I<throw> on error if they return B<self>, otherwise they I<fail> on error.
 
 =head3 init()
 

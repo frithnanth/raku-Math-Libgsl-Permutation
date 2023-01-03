@@ -27,6 +27,8 @@ This package provides both the low-level interface to the C library (Raw) and a 
 
 The constructor accepts one parameter: the number of elements in the permutation; it can be passed as a Pair or as a single value. The permutation object is already initialized to the identity (0, 1, 2 … $elems - 1).
 
+All the following methods *throw* on error if they return **self**, otherwise they *fail* on error.
+
 ### init()
 
 This method initialize the permutation object to the identity and returns **self**.
