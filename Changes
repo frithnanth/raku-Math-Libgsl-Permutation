@@ -1,6 +1,7 @@
 Revision history for Math-Libgsl-Permutation
 
 {{$NEXT}}
+    - Drop the obsolete .absolute call :-)
 
 0.1.0  2023-01-03T11:11:43Z
     - Methods that return self throw on error, instead of failing
