@@ -1,6 +1,8 @@
 Revision history for Math-Libgsl-Permutation
 
 {{$NEXT}}
+
+0.1.1  2024-02-05T11:29:49Z
     - Drop the obsolete .absolute call :-)
 
 0.1.0  2023-01-03T11:11:43Z
